@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using skinet.API.Data;
+using skinet.Core.Interface;
+using skinet.Infrastructure.Data;
 
 namespace skinet.API
 {
@@ -32,6 +34,7 @@ namespace skinet.API
             services.AddControllers();
             var connString = _config.GetConnectionString("DefaultConnection");
             services.AddDbContext<StoreContext>(option => option.UseSqlServer(connString));
+            services.AddScoped<IProductRepository, ProductRepository>();
 
         }
 
