@@ -1,37 +1,24 @@
 ﻿<Properties StartupConfiguration="{5045B1BA-B626-4876-8738-B03A46AA7B1F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="skinet.API/Helpers/ProudctUrlResolver.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="skinet.API/Extensions/SwaggerServicesExtensions.cs">
     <Files>
-      <File FileName="skinet.API/DTOs/ProductToReturnDTO.cs" Line="13" Column="8" />
-      <File FileName="skinet.API/Controllers/ProductsController.cs" Line="41" Column="26" />
-      <File FileName="skinet.API/Startup.cs" Line="43" Column="10" />
-      <File FileName="skinet.API/Helpers/MappingProfiles.cs" Line="14" Column="89" />
-      <File FileName="skinet.API/appsettings.json" Line="1" Column="1" />
-      <File FileName="skinet.API/appsettings.Development.json" Line="12" Column="37" />
-      <File FileName="skinet.API/Helpers/ProudctUrlResolver.cs" Line="4" Column="36" />
+      <File FileName="skinet.API/Extensions/ApplicationConfigurationExtension.cs" Line="11" Column="19" />
+      <File FileName="skinet.API/Startup.cs" Line="43" Column="47" />
+      <File FileName="skinet.API/Extensions/SwaggerServicesExtensions.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ECommerce.Solution" expanded="True">
             <Node name="skinet.API" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="DTOs" expanded="True" />
-              <Node name="Helpers" expanded="True">
-                <Node name="ProudctUrlResolver.cs" selected="True" />
+              <Node name="Extensions" expanded="True">
+                <Node name="SwaggerServicesExtensions.cs" selected="True" />
               </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
-            </Node>
-            <Node name="skinet.Core" expanded="True">
-              <Node name="Entities" expanded="True" />
-              <Node name="Interface" expanded="True" />
-              <Node name="Specifications" expanded="True" />
-            </Node>
-            <Node name="skinet.Infrastructure" expanded="True">
-              <Node name="Data" expanded="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -39,7 +26,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/mahendrasahoo/Projects/ECommerce.Solution/skinet.API/Controllers/BuggyController.cs" relfile="skinet.API/Controllers/BuggyController.cs" line="54" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
