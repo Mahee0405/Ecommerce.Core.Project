@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using skinet.API.Data;
+using skinet.API.Helpers;
 using skinet.Core.Interface;
 using skinet.Infrastructure.Data;
 
@@ -35,6 +37,8 @@ namespace skinet.API
             var connString = _config.GetConnectionString("DefaultConnection");
             services.AddDbContext<StoreContext>(option => option.UseSqlServer(connString));
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+            services.AddAutoMapper(typeof(MappingProfiles));
 
         }
 
@@ -49,6 +53,7 @@ namespace skinet.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 

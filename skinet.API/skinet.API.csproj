@@ -15,10 +15,16 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
    
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\skinet.Infrastructure\skinet.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 </Project>
