@@ -1,18 +1,26 @@
 ﻿<Properties StartupConfiguration="{5045B1BA-B626-4876-8738-B03A46AA7B1F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="skinet.API/Extensions/SwaggerServicesExtensions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="skinet.API/Startup.cs">
     <Files>
-      <File FileName="skinet.API/Extensions/ApplicationConfigurationExtension.cs" Line="11" Column="19" />
-      <File FileName="skinet.API/Startup.cs" Line="43" Column="47" />
-      <File FileName="skinet.API/Extensions/SwaggerServicesExtensions.cs" Line="1" Column="1" />
+      <File FileName="skinet.API/Startup.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ECommerce.Solution" expanded="True">
             <Node name="skinet.API" expanded="True">
-              <Node name="Extensions" expanded="True">
-                <Node name="SwaggerServicesExtensions.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Middleware" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+            <Node name="skinet.Core" expanded="True">
+              <Node name="Interface" expanded="True" />
+              <Node name="Specifications" expanded="True" />
+            </Node>
+            <Node name="skinet.Infrastructure" expanded="True">
+              <Node name="Data" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -26,9 +34,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/mahendrasahoo/Projects/ECommerce.Solution/skinet.API/Controllers/BuggyController.cs" relfile="skinet.API/Controllers/BuggyController.cs" line="54" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
