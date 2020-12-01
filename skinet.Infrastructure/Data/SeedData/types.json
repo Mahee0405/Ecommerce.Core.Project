@@ -1,18 +1,21 @@
 [
   {
-   
-    "Name": "Boards"
+
+    "Name": "Gloves"
   },
   {
-    
+
+    "Name": "Boots"
+  },
+
+  {
+
     "Name": "Hats"
   },
   {
-   
-    "Name": "Boots"
-  },
-  {
-    
-    "Name": "Gloves"
+
+    "Name": "Boards"
   }
+
+
 ]

@@ -9,8 +9,8 @@ using skinet.API.Data;
 namespace skinet.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20201118065343_InitialCatalog")]
-    partial class InitialCatalog
+    [Migration("20201125143918_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

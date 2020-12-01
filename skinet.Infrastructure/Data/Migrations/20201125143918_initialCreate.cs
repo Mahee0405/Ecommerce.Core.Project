@@ -2,7 +2,7 @@
 
 namespace skinet.Infrastructure.Data.Migrations
 {
-    public partial class InitialCatalog : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

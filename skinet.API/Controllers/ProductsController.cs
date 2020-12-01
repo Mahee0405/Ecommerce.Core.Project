@@ -43,8 +43,11 @@ namespace skinet.API.Controllers
             var products = await _productRepo.ListAsync(spec);
 
             var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDTO>>(products);
-           
-            return Ok(new Pagination<ProductToReturnDTO>(@params.PageIndex,@params.PageSize,totalItems,data));
+
+            var results = new Pagination<ProductToReturnDTO>(@params.PageIndex, @params.PageSize, totalItems, data);
+
+
+            return Ok(results);
         }
 
         [HttpGet("{id}")]

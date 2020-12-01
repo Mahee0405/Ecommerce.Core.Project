@@ -8,6 +8,7 @@ using skinet.API.Data;
 using skinet.API.Extensions;
 using skinet.API.Helpers;
 using skinet.API.Middleware;
+using StackExchange.Redis;
 
 namespace skinet.API
 {
@@ -28,15 +29,22 @@ namespace skinet.API
             services.AddControllers();
             var connString = _config.GetConnectionString("DefaultConnection");
             services.AddDbContext<StoreContext>(option => option.UseSqlServer(connString));
+
+            services.AddSingleton<IConnectionMultiplexer>(c =>
+            {
+                var configuration = ConfigurationOptions.Parse(_config.GetConnectionString("Redis"), true);
+                return ConnectionMultiplexer.Connect(configuration);
+            });
             services.AddApplicationServices();
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddSwaggerDocumentation();
 
             services.AddCors(opt =>
             {
-                opt.AddPolicy("CorsPolicy", policy =>
+                opt.AddPolicy(name:"CorsPolicy", policy =>
                  {
-                     policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:/4200");
+                     policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+                     //policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                  });
             });
         }

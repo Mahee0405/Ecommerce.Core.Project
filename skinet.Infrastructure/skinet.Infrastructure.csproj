@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
     <Folder Include="Data\Config\" />
     <Folder Include="Data\SeedData\" />
+    <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\skinet.Core\skinet.Core.csproj" />

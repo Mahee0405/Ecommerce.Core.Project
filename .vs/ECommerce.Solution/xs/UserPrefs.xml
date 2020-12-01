@@ -1,7 +1,13 @@
 ﻿<Properties StartupConfiguration="{5045B1BA-B626-4876-8738-B03A46AA7B1F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="skinet.API/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="skinet.Infrastructure/Data/BasketRepository.cs">
     <Files>
-      <File FileName="skinet.API/Startup.cs" Line="1" Column="1" />
+      <File FileName="skinet.Core/Entities/CustomerBasket.cs" Line="8" Column="31" />
+      <File FileName="skinet.Core/Entities/BasketItems.cs" Line="3" Column="28" />
+      <File FileName="skinet.Core/Interface/IBasketRepository.cs" Line="9" Column="30" />
+      <File FileName="skinet.Infrastructure/Data/BasketRepository.cs" Line="16" Column="45" />
+      <File FileName="skinet.API/Startup.cs" Line="35" Column="14" />
+      <File FileName="skinet.API/appsettings.Development.json" Line="11" Column="24" />
+      <File FileName="skinet.API/Controllers/ProductsController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,24 +15,20 @@
           <Node name="ECommerce.Solution" expanded="True">
             <Node name="skinet.API" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Helpers" expanded="True" />
-              <Node name="Middleware" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Extensions" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
             </Node>
             <Node name="skinet.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
               <Node name="Interface" expanded="True" />
-              <Node name="Specifications" expanded="True" />
             </Node>
             <Node name="skinet.Infrastructure" expanded="True">
-              <Node name="Data" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="BasketRepository.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -34,7 +36,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/mahendrasahoo/Projects/ECommerce.Solution/skinet.API/Controllers/BasketController.cs" relfile="skinet.API/Controllers/BasketController.cs" line="20" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
