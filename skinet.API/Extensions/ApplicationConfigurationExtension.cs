@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using skinet.API.Errors;
 using skinet.Core.Interface;
 using skinet.Infrastructure.Data;
+using skinet.Infrastructure.Services;
 
 namespace skinet.API.Extensions
 {
@@ -12,9 +13,11 @@ namespace skinet.API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<ITokenService, TokenServices>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+           
 
             // to generate the ModelState error
             services.Configure<ApiBehaviorOptions>(options =>

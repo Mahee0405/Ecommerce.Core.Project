@@ -16,7 +16,7 @@ namespace skinet.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<BasketItem>> GetBasketById(string id)
+        public async Task<ActionResult<CustomerBasket>> GetBasketById(string id)
         {
             var basket = await _repository.GetBasketAsync(id);
             return Ok(basket ?? new CustomerBasket(id));

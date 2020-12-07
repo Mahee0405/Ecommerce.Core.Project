@@ -2,18 +2,21 @@ using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using skinet.API.Data;
 using skinet.API.Extensions;
 using skinet.API.Helpers;
 using skinet.API.Middleware;
+using skinet.Infrastructure.Identity;
 using StackExchange.Redis;
 
 namespace skinet.API
 {
     public class Startup
     {
+
         private   IConfiguration _config { get; }
 
         public Startup(IConfiguration config)
@@ -29,6 +32,8 @@ namespace skinet.API
             services.AddControllers();
             var connString = _config.GetConnectionString("DefaultConnection");
             services.AddDbContext<StoreContext>(option => option.UseSqlServer(connString));
+            var identityConnectionString = _config.GetConnectionString("IdentityConnection");
+            services.AddDbContext<AppIdentityDbContext>(option => option.UseSqlServer(identityConnectionString));
 
             services.AddSingleton<IConnectionMultiplexer>(c =>
             {
@@ -36,6 +41,7 @@ namespace skinet.API
                 return ConnectionMultiplexer.Connect(configuration);
             });
             services.AddApplicationServices();
+            services.AddIdentityService(_config);
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddSwaggerDocumentation();
 
@@ -67,6 +73,9 @@ namespace skinet.API
             app.UseStaticFiles();
 
             app.UseCors("CorsPolicy");
+
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseSwaggerDocumentation();

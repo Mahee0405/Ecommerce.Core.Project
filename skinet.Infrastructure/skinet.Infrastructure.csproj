@@ -11,6 +11,12 @@
     <Folder Include="Data\Config\" />
     <Folder Include="Data\SeedData\" />
     <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.6.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.6.0" />
+    <Folder Include="Identity\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\skinet.Core\skinet.Core.csproj" />
