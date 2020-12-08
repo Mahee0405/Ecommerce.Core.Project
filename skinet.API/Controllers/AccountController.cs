@@ -95,10 +95,16 @@ namespace skinet.API.Controllers
                 Token = _tokenService.CreteToken(user)
             };
         }
-
+        
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
+            if(CheckEmailExists(registerDto.Email).Result.Value)
+            {
+                return new BadRequestObjectResult(new ApiValidationErrorReponse {
+                    Errors =new[] {"Email addrss in use"}
+                });
+            }
             var user = new AppUser
             {
                 DisplayName = registerDto.DisplayName,
