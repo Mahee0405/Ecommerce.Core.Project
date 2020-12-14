@@ -13,6 +13,8 @@ namespace skinet.API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<IUnitofWork, UnitofWork>();
+            services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ITokenService, TokenServices>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();

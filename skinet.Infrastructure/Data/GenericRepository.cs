@@ -19,10 +19,28 @@ namespace skinet.Infrastructure.Data
             _context = context;
         }
 
+        public void Add(T entity)
+        {
+            _context.Set<T>().Add(entity);
+        }
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public void Delete(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+        }
+
         public async Task<int> CountAsync(ISpecification<T> spec)
         {
             return await ApplySepecifaction(spec).CountAsync();
         }
+
+       
 
         public async Task<T> GetByIdAsync(int id)
         {
@@ -43,6 +61,8 @@ namespace skinet.Infrastructure.Data
         {
             return await ApplySepecifaction(spec).ToListAsync();
         }
+
+       
 
         private IQueryable<T> ApplySepecifaction(ISpecification<T> spec)
         {

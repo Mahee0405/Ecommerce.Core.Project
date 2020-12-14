@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using skinet.API.Data;
 using skinet.Core.Entities;
+using skinet.Core.Entities.OrderAggregate;
 
 namespace skinet.Infrastructure.Data
 {
@@ -56,19 +57,19 @@ namespace skinet.Infrastructure.Data
 
                 }
 
-                //if (!context.DeliveryMethods.Any())
-                //{
-                //    var dmData = File.ReadAllText("../skinet.Infrastructure/Data/SeedData/delivery.json");
-                //    var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(dmData);
+                if (!context.DeliveryMethods.Any())
+                {
+                    var dmData = File.ReadAllText("../skinet.Infrastructure/Data/SeedData/delivery.json");
+                    var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(dmData);
 
-                //    foreach (var item in methods)
-                //    {
-                //        context.DeliveryMethods.Add(item);
-                //    }
+                    foreach (var item in methods)
+                    {
+                        context.DeliveryMethods.Add(item);
+                    }
 
-                //    await context.SaveChangesAsync();
+                    await context.SaveChangesAsync();
 
-                //}
+                }
 
 
             }
